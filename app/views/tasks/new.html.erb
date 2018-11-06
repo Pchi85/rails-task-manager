@@ -1,9 +1,11 @@
+<div class="forms">
 <%= form_for(@task) do |f| %>
   <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, class: 'form-control'%>
   <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.label :completed %>
-  <%= f.text_field :completed %>
-  <%= f.submit value="add new task" %>
+  <%= f.text_field :details, class: 'form-control'%>
+  <br>
+  <%= f.check_box :completed %>
+  <%= f.submit class: 'btn btn-primary'%>
 <% end %>
+</div>

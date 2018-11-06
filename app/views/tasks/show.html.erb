@@ -1,2 +1,18 @@
-<h2><%= @task.title %></h2>
-<p><%= @task.details %></p>
+<div class="container text-inline">
+  <h2><%= @task.title %></h2>
+  <p id="border-grey"><%= @task.details %></p>
+  <ul>
+    <li><%= link_to(edit_task_path) do %>
+        <i class="far fa-edit"></i>
+        Edit
+        <% end %>
+    </li>
+    <li><%= link_to(tasks_path) do %>
+        <i class="fas fa-undo"></i>
+        Back
+        <% end %>
+    </li>
+  </ul>
+</div>
+
+
